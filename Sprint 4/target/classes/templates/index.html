@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -35,10 +35,10 @@
     <div class="container px-4 px-lg-5 text-center">
         <h1 class="mb-1">Listado de estudiantes</h1>
         <h3 class="mb-5"><em>Estudiantes de Ing.de Sistemas e Informática</em></h3>
-        <div sec:authorize="!isAuthentificated()">
+        <div sec:authorize="!isAuthenticated()">
             <a class="btn btn-primary btn-xl" href="/students">Iniciar Sesión</a>
         </div>
-        <div sec:authorize="isAuthentificated()">
+        <div sec:authorize="isAuthenticated()">
             <a class="btn btn-primary btn-xl" href="/students">Ir al listado</a>
         </div>
     </div>
