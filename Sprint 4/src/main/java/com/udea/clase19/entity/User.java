@@ -10,8 +10,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String email;
-    @Column
-    private String image;
     @Column(unique = true)
     private String authOId;
     @Column
@@ -22,7 +20,6 @@ public class User {
 
     public User(String email, String image, String authOId, String rol) {
         this.email = email;
-        this.image = image;
         this.authOId = authOId;
         this.rol = rol;
     }
@@ -43,14 +40,6 @@ public class User {
         this.email = email;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
     public String getAuthOId() {
         return authOId;
     }
@@ -66,4 +55,8 @@ public class User {
     public void setRol(String rol) {
         this.rol = rol;
     }
+
+    public void setAuth0UserId(String auth0UserId) {
+    }
+
 }

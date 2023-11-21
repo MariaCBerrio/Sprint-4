@@ -37,7 +37,7 @@ public class StudentService {
         studentRepository.deleteById(id);
         return "Has eliminado el estudiante con el ID: " + id;
     }
-//    CRUD: Ver Estudiante, Añadir Estudiante, MOdificar Estudiante, Eliminar Estudiante
+//    CRUD: Ver Estudiante, Añadir Estudiante, Modificar Estudiante, Eliminar Estudiante
 
     public boolean markStudentAvailable(Integer id){
         Student student = studentRepository.findById(id).orElse(null);
