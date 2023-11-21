@@ -1,5 +1,4 @@
 package com.udea.clase19.entity;
-
 import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,7 +9,6 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(unique = true)
     private String email;
     @Column
     private String image;
