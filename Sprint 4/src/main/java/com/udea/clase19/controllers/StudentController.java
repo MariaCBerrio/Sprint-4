@@ -2,12 +2,14 @@ package com.udea.clase19.controllers;
 import com.udea.clase19.entity.Student;
 import com.udea.clase19.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
+@Controller
 @RestController
 public class StudentController {
     @Autowired
@@ -50,7 +52,7 @@ public class StudentController {
         studentService.markStudentAvailable(id);
         return new RedirectView("/students");
     }
-    @PostMapping("student/update")
+    @PostMapping("/student/update")
     public RedirectView updateStudent(@ModelAttribute Student student){
         studentService.updateStudent(student);
         return new RedirectView("/students");

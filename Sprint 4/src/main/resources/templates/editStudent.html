@@ -11,7 +11,7 @@
 <body>
 <div class = "px-4 py-5 my -5 text-center">
     <h1>Editar Estudiante</h1>
-    <form th:object="${student}" th:action="@{student/update}" th:method="post">
+    <form th:object="${student}" th:action="@{/student/update}" th:method="post">
         <input type="hidden" th:field="*{id}"/>
         <div class="form-group">
             <label for="name" >Nombre:</label>
@@ -22,7 +22,7 @@
             <input type="number" class="form-control" id="age" th:field="*{age}">
         </div>
         <div>
-            <button type="submit" class="btn btn-primary"Guardar Cambios</button>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
         </div>
 
     </form>
