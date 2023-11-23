@@ -12,7 +12,14 @@
             <input th:field= "*{name}" class = "form-control" type="text" placeholder="Nombre(s)">
             <input th:field= "*{surName}" class = "form-control" type="text" placeholder="Apellido(s)">
             <input th:field= "*{age}" class = "form-control" type="number" placeholder="Edad">
-            <input th:field= "*{degree}" class = "form-control" type="text" placeholder="Pregrado">
+<!--            <input th:field= "*{degree}" class = "form-control" type="text" placeholder="Pregrado">-->
+            <select th:field="*{degree}" class="form-control">
+                <option value="">Selecciona un pregrado</option>
+                <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                <option value="Ingeniería Informática">Ingeniería Informática</option>
+                <option value="Ciencias de la Computación">Ciencias de la Computación</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
             <button class="btn btn-primary" type="submit" style="margin: 20px;">Añadir estudiante</button>
         </form>
     </div>
